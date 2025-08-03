@@ -6,6 +6,9 @@ class Decidehome(hass.Hass):
         self.log("Listening for arrivals/departures..")
 
     def set_presence(self, entity, attribute, old, new, kwargs):
+        #Used because when I'm out if I disconnect and reconnect to random wifis it triggers
+        if old != "VM2072540" and new != "VM2072540":
+            return
         state = "on" if new == "VM2072540" else "off"
         self.log(f"Setting at_home to {state}")
         self.call_service("input_boolean/turn_" + state, entity_id="input_boolean.at_home")
