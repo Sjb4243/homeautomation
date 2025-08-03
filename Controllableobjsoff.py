@@ -1,0 +1,1 @@
+controllable = ["switch.monitor", "light.bedroomlight"]

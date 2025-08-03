@@ -1,0 +1,13 @@
+Check if left home:
+  module: Checkifleft
+  class: Checkleft
+  parameters:
+    time: 600
+
+Detect if charging:
+  module: Charging
+  class: Detectcharging
+
+Decidehome:
+  module: Decidehome
+  class: Decidehome
